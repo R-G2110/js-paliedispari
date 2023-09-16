@@ -17,18 +17,15 @@
 
 	<div class="container">
 		<div class="row  my-5 ">
-			<div class="col">
+			<div class="col-7 offset-5">
 				
-				<button type="button" class="btn btn-success">Palindromo</button>
-				
+				<button id="btn-palindromo" class="btn btn-outline-success">Palindromo</button>
+				<button id="btn-pari-dispari" class="btn btn-outline-warning">Pari o Dispari</button>
+
 			</div>
-			<div class="col">
-				
-				<button type="button" class="btn btn-warning">Pari o Dispari</button>
-				
-			</div>
+		
 		</div>
-		<div class="card palindromo ">
+		<div id="palindromo" class="card d-none">
 			<div class="card-body">
 				<h2>VERIFICA PAROLA PALINDROMA</h2>
 				<div class="row g-3 my-5 ">
@@ -38,23 +35,27 @@
 						<input type="text" class="form-control text-lowercase " id="input-word">
 					</div>
 					
+					
+				</div>
+				<div class="row">
 					<div class="col-12">
-						<button id="btn-verifica" class="btn btn-primary">Verifica</button>
+						<button id="btn-verifica" class="btn btn-outline-primary">Verifica</button>
+						<button class="btn btn-reset btn-outline-danger">Reset</button>
 					</div>
 				</div>
-				<h3 id="output-palindromo"></h3>
+				<h3 id="output-palindromo" class="my-5 d-none"></h3>
 			</div>
 		</div>
 
-		<div class="card pari-dispari ">
+		<div id="pari-dispari" class="card d-none">
 			<div class="card-body">
 
 				<h2>IL GIOCO DEL PARI O DISPARI</h2>
 				<div class="row g-3 my-5 ">
 					
 					<div class="col-md-4">
-						<label for="input-number" class="form-label">Scegli un numero tra 1 e 5</label>
-						<select id="input-number" class="form-select">
+						<label for="input-number" class="form-label">* Scegli un numero tra 1 e 5</label>
+						<select id="input-number" class="form-select" required>
 							<option value=""></option>
 							<option value="1">1</option>
 							<option value="2">2</option>
@@ -64,20 +65,24 @@
 						</select>
 					</div>
 					<div class="col-md-4">
-						<label for="input-odd-even" class="form-label">Scegli tra pari o dispari</label>
-						<select id="input-odd-even" class="form-select">
+						<label for="input-odd-even" class="form-label">* Scegli tra pari o dispari</label>
+						<select id="input-odd-even" class="form-select" required>
 							<option value=""></option>
 							<option value="pari">pari</option>
 							<option value="dispari">dispari</option>
 						</select>
 					</div>
 					
-					<div class="col-12">
-						<button id="btn-play" class="btn btn-primary ">Gioca</button>
+				</div>
+				<div class="row">
+					<div class="col-12 mb-3">
+						<button id="btn-play" class="btn btn-outline-primary">Gioca</button>
+						<button class="btn btn-reset btn-outline-danger">Reset</button>
 					</div>
 				</div>
-				<h3 id="outputPariDispari"></h3>
-				<h4></h4>
+				<span class="text-red">* Campi obbligatori</span>
+				<h3 id="output-pari-dispari" class="d-none my-3 "></h3>
+				<h4 class="d-none"></h4>
 			</div>
 		</div>
 	</div>
