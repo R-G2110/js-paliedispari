@@ -117,7 +117,8 @@ function verificaParolaPalindroma (string){
  * @param {data inserted} data 
  */
 function verificaDati(data){
-	if(data === "") result = false;
+	
+	if(data.trim() === "") result = false;
 	else result = true;
 	return result;
 };
